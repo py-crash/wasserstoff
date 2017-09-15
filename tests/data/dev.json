@@ -1,0 +1,9 @@
+{
+  "smtp server": [
+	"smtp.yandex.ru",
+	"smtp.gmail.com"
+  ],
+  "port": 456,
+  "ssl": true,
+  "secret_key": "SECRET_KEY_HERE"
+}

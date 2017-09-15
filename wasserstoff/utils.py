@@ -1,7 +1,7 @@
 import json
 
 
-def read_config(filename):
+def pull(filename):
     """Read JSON file and return content of file.
 
     :param filename: Name of configuration file.
@@ -13,11 +13,8 @@ def read_config(filename):
     return data
 
 
-def update_object():
-    pass
-
-
-def const_style(var):
+def stylize(var):
+    """Change variable style to upper case with underscores"""
     return str(var) \
         .replace(' ', '_') \
         .replace('-', '_') \
