@@ -16,6 +16,9 @@ not have any side dependencies.
 
 .. image:: https://travis-ci.org/lk-geimfari/wasserstoff.svg?branch=master
     :target: https://travis-ci.org/lk-geimfari/wasserstoff
+	
+.. image:: https://badge.fury.io/py/wasserstoff.svg
+    :target: https://badge.fury.io/py/wasserstoff
 
 .. image:: https://codecov.io/gh/lk-geimfari/wasserstoff/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/lk-geimfari/wasserstoff

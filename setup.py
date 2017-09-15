@@ -45,6 +45,7 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     description=about['__description__'],
+    long_description=readme,
     keywords=[
         'wasserstoff',
         'config',
