@@ -14,6 +14,13 @@ to the scope of configuration object. The library was written with the
 use of tools from the standard Python library, and therefore, it does
 not have any side dependencies.
 
+.. image:: https://travis-ci.org/lk-geimfari/wasserstoff.svg?branch=master
+    :target: https://travis-ci.org/lk-geimfari/wasserstoff
+
+.. image:: https://codecov.io/gh/lk-geimfari/wasserstoff/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/lk-geimfari/wasserstoff
+  
+
 Installation
 ~~~~~~~~~~~~
 
