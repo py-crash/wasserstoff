@@ -44,32 +44,47 @@ Content of `test.json`:
 
 Loading configurations from the file:
 ```python
->>> import wasserstoff
->>> config = wasserstoff.Config()
 
->>> config.add(
+>>> from wasserstoff import (
+...     Config,
+...     Environment,
+... )
+
+>>> env = Environment()
+
+>>> dev = Config(
+...     filename='dev',
 ...     scope='dev',
-...     file='dev', # without extension
-... ).setup()
+... )
 
->>> config.dev.SMTP_SERVER
+>>> test = Config(
+...     filename='test',
+...     scope='test',
+... )
+
+>>> env.patch(dev, test)
+>>> env.commit()
+```
+
+Now you can access to your configurations:
+
+```python
+>>> env.dev.SMTP_SERVER
 ['smtp.yandex.ru', 'smtp.gmail.com']
 
->>> config.dev.SSL
+>>> env.dev.SSL
 True
 
->>> config.dev.PORT
+>>> env.dev.PORT
 456
 
->>> config.dev.SECRET_KEY
+>>> env.dev.SECRET_KEY
 'SECRET_KEY_HERE'
 
->>> config.add(
-...     scope='test',
-...     file='test',
-... ).setup()
+>>> env.test.SSL
+False
 
->>> config.test.SECRET_KEY
+>>> env.test.SECRET_KEY
 '001110110100101100101010100010111010'
 ```
 

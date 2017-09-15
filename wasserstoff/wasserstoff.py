@@ -1,22 +1,26 @@
 from wasserstoff.utils import read_config
 
 
-class Config(object):
+class Environment(object):
     """Main class"""
 
-    def __init__(self, filename=None):
-        if filename:
-            self._config = read_config(filename)
+    def patch(self, *args):
+        for obj in args:
+            setattr(self, obj.NAME, obj)
 
-    @staticmethod
-    def const_style(var):
-        var = str(var).replace(' ', '_').replace('-', '_')
-        return var.upper()
-
-    def add(self, scope, file):
         return self
 
-    def setup(self):
-        """Create consts in scope of current object.
-        """
+    def commit(self):
         pass
+
+
+class Config(object):
+    """Environment
+    """
+
+    NAME = ''
+
+    def __init__(self, filename=None, scope=None):
+        if filename:
+            self.NAME = scope
+            self._config = read_config(filename)
