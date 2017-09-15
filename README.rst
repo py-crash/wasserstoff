@@ -1,4 +1,4 @@
-.. image:: https://raw.githubusercontent.com/lk-geimfari/wasserstoff/master/media/wasserstoff_large.png.png
+.. image:: https://raw.githubusercontent.com/lk-geimfari/wasserstoff/master/media/logo.png
     :target: https://github.com/lk-geimfari/wasserstoff
 
 
@@ -10,13 +10,13 @@ not have any side dependencies.
 
 .. image:: https://travis-ci.org/lk-geimfari/wasserstoff.svg?branch=master
     :target: https://travis-ci.org/lk-geimfari/wasserstoff
-	
+
 .. image:: https://badge.fury.io/py/wasserstoff.svg
     :target: https://badge.fury.io/py/wasserstoff
 
 .. image:: https://codecov.io/gh/lk-geimfari/wasserstoff/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/lk-geimfari/wasserstoff
-  
+
 
 Installation
 ~~~~~~~~~~~~

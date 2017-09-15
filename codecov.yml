@@ -24,3 +24,5 @@ parsers:
       method: false
   javascript:
     enable_partials: false
+ignore:
+  - "wasserstoff/__version__.py"
