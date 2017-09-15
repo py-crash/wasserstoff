@@ -20,6 +20,7 @@ or (when the project has been cloned):
 ### Usage
 
 Content of `dev.json`:
+
 ```json
 {
   "smtp server": [
@@ -30,19 +31,20 @@ Content of `dev.json`:
   "ssl": true,
   "secret_key": "SECRET_KEY_HERE"
 }
-
 ```
 
-Content of `test.json`:
+Content of `test.json`: 
+
 ```json
 {
   "ssl": false,
   "secret_key": "001110110100101100101010100010111010"
 }
-
 ```
 
+
 Loading configurations from the file:
+
 ```python
 
 >>> from wasserstoff import (
