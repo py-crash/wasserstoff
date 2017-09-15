@@ -1,1 +1,8 @@
+title: Wasserstoff
+description: Library that helps easily (really) manage configurations of applications.
+google_analytics: 
+show_downloads: true
 theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
