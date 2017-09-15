@@ -1,6 +1,6 @@
 """Meta-data of Wasserstoff."""
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __title__ = 'wasserstoff'
 __description__ = 'Store your configurations for applications in JSON.'
 __url__ = 'https://github.com/lk-geimfari/wasserstoff'
