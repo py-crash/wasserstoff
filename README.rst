@@ -1,11 +1,5 @@
-.. raw:: html
-
-    <a href="https://github.com/lk-geimfari/wasserstoff">
-    	<p align="center">
-      	    <img src="https://raw.githubusercontent.com/lk-geimfari/wasserstoff/master/media/wasserstoff_large.png">
-   	</p>
-    </a>
-
+.. image:: https://raw.githubusercontent.com/lk-geimfari/wasserstoff/master/media/wasserstoff_large.png.png
+    :target: https://github.com/lk-geimfari/wasserstoff
 
 
 **Wasserstoff** - is a library that help you store your configurations
