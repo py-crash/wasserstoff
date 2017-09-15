@@ -27,7 +27,7 @@ class Environment(object):
                 setattr(self, cfg.scope, cfg)
                 cfg.create()
         else:
-            raise exceptions.EnvNotFound(
+            raise exceptions.ConfigsNotFound(
                 'Environments list is empty',
             )
 

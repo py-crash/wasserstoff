@@ -30,3 +30,8 @@ def test():
         filename=PATH + '/test',
         scope='test',
     )
+
+
+@pytest.fixture
+def default():
+    return Config(filename=PATH + '/default')
