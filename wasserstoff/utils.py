@@ -16,9 +16,11 @@ def pull(filename):
 
 def stylize(var):
     """Change variable style to upper case with underscores"""
+
     return str(var) \
         .replace(' ', '_') \
         .replace('-', '_') \
+        .replace('.', '_') \
         .upper()
 
 
@@ -28,6 +30,7 @@ def update_scope(initial, new):
     :param initial: Dict to update.
     :param new: Dict to update from.
     :return: Updated dict.
+    :rtype: dict
     """
     for k, v in new.items():
         if isinstance(v, Mapping):
