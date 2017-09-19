@@ -1,3 +1,4 @@
+from collections import Mapping
 import json
 
 
@@ -19,3 +20,19 @@ def stylize(var):
         .replace(' ', '_') \
         .replace('-', '_') \
         .upper()
+
+
+def update_scope(initial, new):
+    """Recursively update a dictionary.
+
+    :param initial: Dict to update.
+    :param new: Dict to update from.
+    :return: Updated dict.
+    """
+    for k, v in new.items():
+        if isinstance(v, Mapping):
+            r = update_scope(initial.get(k, {}), v)
+            initial[k] = r
+        else:
+            initial[k] = new[k]
+    return initial
