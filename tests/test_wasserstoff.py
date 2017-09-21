@@ -21,9 +21,12 @@ def test_env_patch(env, dev, test):
     assert len(env.configs) == 2
 
 
-def test_env_commit(env, dev, test, default):
-    env.patch(dev, test, default)
-    env.commit()
+def test_env_commit(env, default, dev, test):
+    env.patch(
+        default,
+        dev,
+        test,
+    ).commit()
 
     assert env.dev.SSL
     assert not env.test.SSL

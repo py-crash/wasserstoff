@@ -80,8 +80,8 @@ Loading configurations from the file:
     ...     scope='test',
     ... )
 
-    >>> env.patch(dev, test)
-    >>> env.commit()
+    >>> env.patch(dev, test).commit()
+
 
 Now you can access to your configurations:
 
