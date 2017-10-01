@@ -3,7 +3,7 @@ from wasserstoff.parsers import textparse
 import json
 
 
-def pull(filename, format='json'):
+def pull(filename, fmt='json'):
     """Read file and return contents of file.
 
     :param filename: Name of configuration file.
@@ -11,10 +11,10 @@ def pull(filename, format='json'):
     :return: Content of configuration file.
     :rtype: dict
     """
-    if format == 'json':
+    if fmt == 'json':
         with open(filename + '.json', 'r') as file:
             data = json.load(file)
-    if format == 'text':
+    if fmt == 'text':
         with open(filename, 'r') as file:
             data = textparse(file)
     return data
