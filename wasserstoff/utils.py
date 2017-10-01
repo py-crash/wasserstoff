@@ -1,4 +1,5 @@
 from collections import Mapping
+from wasserstoff.parsers import textparse
 import json
 
 
@@ -13,6 +14,9 @@ def pull(filename, format='json'):
     if format == 'json':
         with open(filename + '.json', 'r') as file:
             data = json.load(file)
+    if format == 'text':
+        with open(filename, 'r') as file:
+            data = textparse(file)
     return data
 
 
