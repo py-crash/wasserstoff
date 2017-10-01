@@ -33,9 +33,11 @@ def test_env_commit(env, default, dev, test):
     assert not env.default.SSL
 
 
-def test_config(dev, test):
+def test_config(dev, test, text):
     dev.create()
     test.create()
+    text.create()
 
     assert dev.SSL
     assert not test.SSL
+    assert text.SSL
