@@ -36,14 +36,16 @@ class Config(object):
     """Environment
     """
 
-    def __init__(self, filename=None, scope=None):
+    def __init__(self, filename=None, scope=None, format=None):
+        if format is None:
+            format = 'json'
         if scope is not None:
             self.scope = scope
         else:
             self.scope = 'default'
 
         if filename:
-            self.dictionary = pull(filename)
+            self.dictionary = pull(filename, format)
 
     def create(self):
         """Set key value attributes to the scope of current instance.

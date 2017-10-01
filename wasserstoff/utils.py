@@ -2,15 +2,17 @@ from collections import Mapping
 import json
 
 
-def pull(filename):
-    """Read JSON file and return content of file.
+def pull(filename, format='json'):
+    """Read file and return contents of file.
 
     :param filename: Name of configuration file.
+    :param format: format to parse, defaults to json
     :return: Content of configuration file.
     :rtype: dict
     """
-    with open(filename + '.json', 'r') as file:
-        data = json.load(file)
+    if format == 'json':
+        with open(filename + '.json', 'r') as file:
+            data = json.load(file)
     return data
 
 
