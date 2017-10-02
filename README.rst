@@ -79,10 +79,11 @@ Loading configurations from the file:
     >>> test = Config(
     ...     filename='test',
     ...     scope='test',
-	...     ext='json',
+	...     ext='txt',
     ... )
 
-    >>> env.patch(dev, test).commit()
+    >>> env.patch(dev, test)
+    >>>> env.commit()
 
 
 Now you can access to your configurations:
