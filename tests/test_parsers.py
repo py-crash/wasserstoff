@@ -1,3 +1,9 @@
+from os.path import (
+    abspath,
+    dirname,
+    join,
+)
+
 import pytest
 
 from wasserstoff.parsers import (
@@ -5,6 +11,8 @@ from wasserstoff.parsers import (
     parse_text,
     parse_ini,
 )
+
+PATH = abspath(join(dirname(__file__), 'data'))
 
 
 @pytest.mark.parametrize(
@@ -21,7 +29,7 @@ def test_upper_keys(lower, upper):
 
 
 def test_parse_text():
-    with open('data/text', 'r', encoding='utf-8') as f:
+    with open(PATH + '/text', 'r', encoding='utf-8') as f:
         txt = parse_text(f)
 
     assert isinstance(txt, dict)
