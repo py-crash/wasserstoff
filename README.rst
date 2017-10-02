@@ -3,7 +3,7 @@
 
 
 **Wasserstoff** - is a library that help you store your configurations
-for applications in JSON files. The configuration will be easily loaded
+for applications in JSON, XML, INI and text files. The configuration will be easily loaded
 to the scope of configuration object. The library was written with the
 use of tools from the standard Python library, and therefore, it does
 not have any side dependencies.
@@ -73,11 +73,13 @@ Loading configurations from the file:
     >>> dev = Config(
     ...     filename='dev',
     ...     scope='dev',
+	...     fmt='json',
     ... )
 
     >>> test = Config(
     ...     filename='test',
     ...     scope='test',
+	...     fmt='json',
     ... )
 
     >>> env.patch(dev, test).commit()

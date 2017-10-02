@@ -1,29 +1,41 @@
 from collections import Mapping
-from wasserstoff.parsers import textparse
 import json
+
+from wasserstoff.parsers import parse_text
 
 
 def pull(filename, fmt='json'):
-    """Read file and return contents of file.
+    """
+    Read file and return contents of file.
 
     :param filename: Name of configuration file.
-    :param format: format to parse, defaults to json
+    :param fmt: format to parse, defaults to json
     :return: Content of configuration file.
     :rtype: dict
     """
+    data = None
+
     if fmt == 'json':
-        with open(filename + '.json', 'r') as file:
+        with open(filename + '.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
+
     if fmt == 'text':
-        with open(filename, 'r') as file:
-            data = textparse(file)
+        with open(filename, 'r', encoding='utf-8') as file:
+            data = parse_text(file)
+
     return data
 
 
-def stylize(var):
-    """Change variable style to upper case with underscores"""
+def stylize(string):
+    """
+    Change variable style to upper case with underscores.
+    :param string: String.
 
-    return str(var) \
+    :Example:
+        UNDERSCORE_VAR
+    """
+
+    return str(string) \
         .replace(' ', '_') \
         .replace('-', '_') \
         .replace('.', '_') \
@@ -31,7 +43,8 @@ def stylize(var):
 
 
 def update_scope(initial, new):
-    """Recursively update a dictionary.
+    """
+    Recursively update a dictionary.
 
     :param initial: Dict to update.
     :param new: Dict to update from.
