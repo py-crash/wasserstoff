@@ -26,3 +26,4 @@ parsers:
     enable_partials: false
 ignore:
   - "wasserstoff/__version__.py"
+  - "wasserstoff/constants.py"
