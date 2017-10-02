@@ -5,7 +5,7 @@ from .conftest import PATH
 
 
 def test_pull():
-    result = pull(PATH + '/dev')
+    result = pull(PATH + '/dev', ext='json')
     assert isinstance(result, dict)
     assert result
 
