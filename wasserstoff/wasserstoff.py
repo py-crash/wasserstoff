@@ -39,16 +39,16 @@ class Config(object):
     Custom environment.
     """
 
-    def __init__(self, filename=None, scope=None, fmt=None):
-        if fmt is None:
-            fmt = 'json'
+    def __init__(self, filename=None, scope=None, ext=None):
+        if ext is None:
+            ext = 'json'
         if scope is not None:
             self.scope = scope
         else:
             self.scope = 'default'
 
         if filename:
-            self.dictionary = pull(filename, fmt)
+            self.dictionary = pull(filename, ext)
 
     def create(self):
         """
