@@ -29,7 +29,7 @@ def parse_text(data):
             except ValueError:
                 continue
 
-    return config
+    return upper_keys(config)
 
 
 def parse_ini(filename=None):
