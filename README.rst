@@ -73,13 +73,13 @@ Loading configurations from the file:
     >>> dev = Config(
     ...     filename='dev',
     ...     scope='dev',
-	...     fmt='json',
+    ...     fmt='json',
     ... )
 
     >>> test = Config(
     ...     filename='test',
     ...     scope='test',
-	...     fmt='json',
+    ...     fmt='json',
     ... )
 
     >>> env.patch(dev, test).commit()
