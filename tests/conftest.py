@@ -42,5 +42,5 @@ def text():
     return Config(
         filename=PATH + '/text',
         scope='test',
-        fmt='text',
+        ext='text',
     )
