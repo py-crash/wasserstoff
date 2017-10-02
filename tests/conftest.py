@@ -35,3 +35,12 @@ def test():
 @pytest.fixture
 def default():
     return Config(filename=PATH + '/default')
+
+
+@pytest.fixture
+def text():
+    return Config(
+        filename=PATH + '/text',
+        scope='test',
+        fmt='text',
+    )

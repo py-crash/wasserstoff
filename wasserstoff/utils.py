@@ -1,16 +1,22 @@
 from collections import Mapping
+from wasserstoff.parsers import textparse
 import json
 
 
-def pull(filename):
-    """Read JSON file and return content of file.
+def pull(filename, fmt='json'):
+    """Read file and return contents of file.
 
     :param filename: Name of configuration file.
+    :param format: format to parse, defaults to json
     :return: Content of configuration file.
     :rtype: dict
     """
-    with open(filename + '.json', 'r') as file:
-        data = json.load(file)
+    if fmt == 'json':
+        with open(filename + '.json', 'r') as file:
+            data = json.load(file)
+    if fmt == 'text':
+        with open(filename, 'r') as file:
+            data = textparse(file)
     return data
 
 
