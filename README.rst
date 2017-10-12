@@ -83,7 +83,7 @@ Loading configurations from the file:
     ... )
 
     >>> env.patch(dev, test)
-    >>>> env.commit()
+    >>> env.commit()
 
 
 Now you can access to your configurations:
